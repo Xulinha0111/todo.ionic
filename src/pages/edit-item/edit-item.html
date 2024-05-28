@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Alterar Tarefa</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Tarefa</ion-label>
+      <ion-input type="text" [(ngModel)]="title" value={{title}}></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Descrição</ion-label>
+      <ion-input type="text" [(ngModel)]="description" value={{description}}></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button full ion-button color="secondary" (click)="updateItem()">Salvar</button>
+
+</ion-content>
